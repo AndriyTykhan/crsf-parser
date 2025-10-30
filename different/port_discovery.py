@@ -16,7 +16,7 @@ def test_command(ser, command, delay=0.5):
     return response.strip()
 
 def main():
-    port = 'COM3'
+    port = 'COM4'
     baudrate = 115200
     
     print("=" * 70)

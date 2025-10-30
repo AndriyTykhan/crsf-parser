@@ -20,7 +20,7 @@ def print_frame(frame: Container, status: PacketValidationStatus) -> None:
 crsf_parser = CRSFParser(print_frame)
 n = 10
 v = 1
-with Serial("COM3", 425000, timeout=2) as ser:
+with Serial("COM4", 425000, timeout=2) as ser:
     input = bytearray()
     while True:
         if n == 0:
@@ -33,6 +33,5 @@ with Serial("COM3", 425000, timeout=2) as ser:
             ser.write(frame)
         n = n - 1
         values = ser.read(100)
-        print(f"✓ Opened {values}")
         input.extend(values)
         crsf_parser.parse_stream(input)

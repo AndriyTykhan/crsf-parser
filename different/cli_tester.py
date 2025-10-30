@@ -21,7 +21,7 @@ def send_cli_command(ser, command):
     return response
 
 def main():
-    port = 'COM3'
+    port = 'COM4'
     baudrate = 115200  # Common CLI baudrate
     
     print("=" * 70)
